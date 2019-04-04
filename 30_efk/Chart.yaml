@@ -1,0 +1,12 @@
+name: efk
+version: 0.3.0
+appVersion: 6.4.2
+description: EFK stack
+keywords:
+- elasticsearch
+- kibana
+- fluent-bit
+maintainers:
+- name: komljen
+  email: alen.komljen@live.com
+home: https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/

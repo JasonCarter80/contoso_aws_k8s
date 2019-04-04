@@ -1,0 +1,3 @@
+global:
+  service:
+    hostname: weave.demo.contoso.com

@@ -1,0 +1,6 @@
+aws:
+  region:  us-east-1
+domainFilters: 
+  - demo.contoso.com
+podAnnotations:
+  iam.amazonaws.com/role: arn:aws:iam::111111111111:role/eks-demo-us-east-1-external-dns

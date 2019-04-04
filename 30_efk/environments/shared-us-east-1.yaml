@@ -1,0 +1,9 @@
+kibana:
+  ingress:
+    enabled: true
+    hosts:
+      - kibana.shared.contoso.com
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+      nginx.ingress.kubernetes.io/rewrite-target: /
+

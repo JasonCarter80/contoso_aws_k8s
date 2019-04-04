@@ -1,0 +1,3 @@
+[submodule "kubeconfigs"]
+	path = kubeconfigs
+	url = https://github.com/JasonCarter80/kubeconfig_example.git

@@ -1,0 +1,12 @@
+nameOverride: cluster-autoscaler
+awsRegion: us-east-1
+image:
+  tag: v1.12.3   ### Keep in line with Kubernetes version https://github.com/kubernetes/autoscaler/releases
+clusterName: demo-us-east-1
+extraArgs:
+  v: 4
+  scale-down-enabled: true
+  scale-down-unneeded-time: 1m
+  skip-nodes-with-system-pods: false
+podAnnotations:
+  iam.amazonaws.com/role: arn:aws:iam::111111111111:role/eks-demo-us-east-1-cluster-autoscaler

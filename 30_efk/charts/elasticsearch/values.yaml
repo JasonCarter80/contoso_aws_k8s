@@ -1,0 +1,36 @@
+# Default values for elasticsearch-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Check https://github.com/upmc-enterprises/elasticsearch-operator#customresourcedefinition for available options
+spec:
+  use-ssl: false
+  elastic-search-image: quay.io/pires/docker-elasticsearch-kubernetes:6.4.2
+  client-node-replicas: 1
+  master-node-replicas: 1
+  data-node-replicas: 1
+  network-host: 0.0.0.0
+  zones: []
+  data-volume-size: 10Gi
+  client-java-options: "-Xms2048m -Xmx2048m"
+  master-java-options: "-Xms2048m -Xmx2048m"
+  data-java-options: "-Xms2048m -Xmx2048m"
+  snapshot:
+    enabled: false
+    bucketName: elasticsnapshots
+    schedule: "@every 2m"
+  storage:
+    # e.g. gp2 for AWS
+    type: gp2
+    # e.g. kubernetes.io/aws-ebs for AWS
+    classProvisioner: volume.alpha.kubernetes.io/storage-class
+    # Retain or Delete
+    reclaimPolicy: Delete
+  resources:
+    requests:
+      memory: 1024Mi
+      cpu: 200m
+    limits:
+      memory: 2048Mi
+      cpu: '1'
+
